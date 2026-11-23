@@ -84,6 +84,7 @@ footer{max-width:860px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <li>Bên dưới là «Đối tượng đang chọn», «Bắt điểm», «Nền DXF / ảnh», «Tờ in &amp; khung tên».</li>
 <li><b>Giấy:</b> cuộn chuột để phóng to thu nhỏ; giữ <kbd>Space</kbd> hoặc kéo trên chỗ trống để di chuyển. Trên điện thoại: kéo một ngón để di chuyển, chụm hai ngón để phóng. Nút <b>Bảng</b> mở bảng bên phải.</li>
 <li><b>Hiển thị ▾:</b> đổi cách nhìn (bản vẽ đen trắng, màu theo phòng, vật liệu, xám, pastel), bật nền DXF, khung tờ in, giao diện sáng / tối.</li>
+<li><b>Nút gạt «Đo hiện trạng»</b> nằm ngay cạnh nút <b>Tệp</b> ở thanh trên: bật lên để đo phòng chữ nhật theo số đo thật (bảng 4 cạnh + chọn góc dồn sai số); tắt nút gạt là về vẽ bình thường. Đổi công cụ khác không làm tắt chế độ này.</li>
 </ul>
 <table>
 <tr><th>Công cụ</th><th>Phím</th><th>Dùng để</th></tr>
@@ -95,6 +96,9 @@ footer{max-width:860px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <tr><td>Nội thất</td><td><kbd>F</kbd> / <kbd>Z</kbd></td><td>Đồ nội thất, cây / tủ</td></tr>
 <tr><td>Ghi chú / vẽ</td><td><kbd>X</kbd> <kbd>N</kbd> <kbd>T</kbd> <kbd>G</kbd></td><td>Chữ, kích thước, đường gióng, vẽ tự do</td></tr>
 <tr><td>Thang</td><td><kbd>U</kbd></td><td>Cầu thang</td></tr>
+<tr><td>Offset (song song)</td><td><kbd>Y</kbd></td><td>Bấm một nét (tường, nét vẽ, phòng, khối, đường gióng) rồi bấm phía cần tạo; gõ khoảng cách, để 0 = đi qua điểm bấm</td></tr>
+<tr><td>Lỗ trong tường</td><td><kbd>S</kbd></td><td>Khoét lỗ / hộp kỹ thuật nằm trọn trong thân tường (cả tường cong); lỗ đi theo tường khi dời, kéo giãn, đổi bề dày</td></tr>
+<tr><td>Dọn rác</td><td><kbd>Shift</kbd>+<kbd>Del</kbd></td><td>Xoá mọi đường gióng và điểm vẽ dở</td></tr>
 </table>
 </section>
 
@@ -180,18 +184,15 @@ footer{max-width:860px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <li>Chọn loại phòng ở bảng phải (khách, ngủ, bếp…) để đổ màu và ghi tên. Diện tích tự tính.</li>
 <li><b>Lỗ thông tầng</b> (giếng trời…) là một loại phòng có ký hiệu riêng, chỉ ghi tên, không ghi diện tích.</li>
 </ul>
-<h3>Đo hiện trạng (nút gạt cạnh tên app, hoặc Shift+A)</h3>
-<p>Dùng khi đi đo nhà thật. Số đo thực tế thường <b>không vuông</b> (cạnh trên khác cạnh dưới vài chục mm), nên trang không vẽ y nguyên từng số mà dựng khung vuông rồi dồn phần lệch vào một góc xấu.</p>
-<ol>
-<li>Vẽ <b>phom</b> tổng thể bằng tường (tường kín), chưa cần đúng số. Có thể đặt cửa, cột như bình thường.</li>
-<li>Gạt nút <b>Đo hiện trạng</b> cạnh tên app (hoặc <kbd>Shift</kbd>+<kbd>A</kbd>) sang bật, rồi bấm vào trong phòng cần đo. Gạt tắt (hoặc chọn công cụ vẽ khác) thì về làm việc bình thường như trước.</li>
-<li>Nhập số đo <b>thông thủy</b> (khoảng trống giữa hai mặt tường trong) của 4 cạnh: Trên, Dưới, Trái, Phải. Gõ được <code>3m</code>, <code>2500+450</code>…</li>
-<li>Chọn <b>góc dồn sai số</b>: góc xấu của nhà (góc WC, góc bếp, góc hộp kỹ thuật…).</li>
-<li>Bấm <b>Áp số đo</b>.</li>
-</ol>
-<p><b>Sửa riêng từng đối tượng:</b> khi nút gạt đang bật, bấm vào một <b>đoạn tường</b> thì bảng «Đối tượng đang chọn» có ô <b>Dài thông thủy</b>. Gõ số mới (<code>4m</code>, <code>3780+220</code>…) thì đầu kia của tường và mọi thứ phía đó được kéo giãn theo, các góc vuông giữ vuông, tường đã nối vẫn nối, phòng và cửa đi theo. Chọn «Đầu đứng yên» (đầu xanh hoặc đầu cam, hiện chấm màu trên tường) để biết phía nào dịch. Bấm vào <b>cột</b>, <b>cửa</b>, <b>đồ</b> thì sửa rộng, cao, vị trí như bình thường.</p>
-<p><b>Trang làm gì với số đo cả phòng:</b> khung phòng thành hình chữ nhật <b>vuông theo số lớn nhất</b> của từng phương (ngang = lớn hơn của Trên / Dưới; dọc = lớn hơn của Trái / Phải). Góc đối diện với góc dồn đứng yên; phần phía góc dồn được kéo giãn: tường chạy qua dài ra hoặc ngắn lại, các góc vuông giữ vuông, tường đã nối vẫn nối, phòng bên cạnh dịch theo, cửa giữ đúng chỗ. Trên màn hình mỗi cạnh ghi số đo; cạnh nào khác số vẽ thì hiện màu cam, kèm «vẽ ..., −40». Góc dồn có chấm đỏ và «bù 40 × 15».</p>
-<div class="note">Ghi chú lệch chỉ hiện trên màn hình, không đưa vào DXF / PDF. Hiện làm cho phòng chữ nhật 4 cạnh; phòng chữ L hoặc nhiều góc sẽ làm sau. Nhập lại số đo cho cùng phòng thì tính tiếp trên khung hiện tại; hoàn tác (<kbd>Ctrl</kbd>+<kbd>Z</kbd>) về một bước.</div>
+<h3>Số đo thông thủy, ổ khoá, cột tròn (làm việc bình thường, không cần chế độ riêng)</h3>
+<ul>
+<li>Chọn một <b>đoạn tường</b> hoặc <b>cột</b>: hiện các ô số thông thủy dọc mặt tường trong phòng — góc → cột, bề rộng cột, cột → cột, khe hở giữa hai đoạn tường, đoạn cột nhô ra khỏi mặt tường. Bấm vào số, gõ số mới, Enter: mép liền kề đứng yên, vật đó và mọi thứ phía sau nhảy theo.</li>
+<li><b>Số đã điền là số bị khoá</b> (hiện ổ khoá cạnh số). Số khác bị sửa thì số khoá không đổi — phần chênh dồn vào đoạn liền trước mốc khoá. Muốn khai lại số đó: bấm <b>hình ổ khoá</b> để mở rồi mới sửa.</li>
+<li><b>Cột đặt lên tường thì tường bị cắt</b> thành hai đoạn dừng ở mặt cột; đổi cỡ, dời hay xoá cột thì tường tự nối lại và cắt lại.</li>
+<li><b>Cột tròn</b>: công cụ Cột (<kbd>C</kbd>) → chọn «Tròn (Ø)» hoặc bấm <kbd>3</kbd>; bấm 1 điểm = tâm. Kéo 4 điểm trên vòng tròn để đổi Ø.</li>
+<li><b>Điểm nắm</b>: chọn cột, đồ, phòng, khối hoặc nét vẽ rồi cầm điểm kéo (cột / đồ: 4 góc; phòng / khối / nét: từng đỉnh).</li>
+<li><b>Đường dóng</b> mặc định dài vô tận và bắt điểm tại chỗ giao với đường dóng khác hoặc cạnh tường.</li>
+</ul>
 <h3>Đồ nội thất, cây (phím F) và tủ (phím Z)</h3>
 <ul>
 <li>Chọn món ở bảng phải rồi bấm để đặt. <kbd>Shift</kbd>+<kbd>R</kbd> xoay 90° (chữ <kbd>r</kbd> thường dành cho gõ độ rộng), <kbd>A</kbd> áp tường gần nhất, <kbd>J</kbd> căn, <kbd>2</kbd> vẽ đồ bằng 2 điểm.</li>
@@ -206,6 +207,16 @@ footer{max-width:860px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <li>Đã chọn: <kbd>Del</kbd> xoá · mũi tên dời 10 mm (<kbd>Shift</kbd> = 100 mm) · <kbd>R</kbd> xoay 45° (<kbd>Shift</kbd>+<kbd>R</kbd> 90°) · <kbd>H</kbd> lật ngang (<kbd>Shift</kbd>+<kbd>H</kbd> lật dọc) · <kbd>M</kbd> đối xứng.</li>
 <li><kbd>Ctrl</kbd>+<kbd>A</kbd> chọn hết · <kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>X</kbd> / <kbd>V</kbd> chép, cắt, dán · <kbd>Ctrl</kbd>+<kbd>D</kbd> nhân bản. Bảng «Đối tượng đang chọn» cho sửa thông số chính xác.</li>
 </ul>
+<h3>Kéo, copy, điểm giữa và tay kéo</h3>
+<ul>
+<li><b>Kéo copy:</b> giữ <kbd>Ctrl</kbd> (hoặc <kbd>Alt</kbd> nếu máy không chiếm phím này) rồi kéo vật = kéo ra một bản sao. Trên điện thoại: bật ô «Kéo vật = copy (cảm ứng)» ở bảng công cụ Chọn.</li>
+<li><b>Hút thẳng hàng:</b> khi kéo, cạnh / tâm của vật tự hút thẳng hàng với vật khác (hiện đường gióng hồng và số khoảng hở tới vật gần nhất). Góc, giữa cạnh, tâm của vật đang kéo cũng hút vào góc / điểm của vật khác.</li>
+<li><b>Giữ <kbd>Shift</kbd> khi kéo</b> (vật, đầu tường, điểm nắm) = khoá theo trục X hoặc Y.</li>
+<li><b>Điểm giữa (chấm tròn):</b> có ở mọi đối tượng; cầm kéo = dời cả vật (tường, dim, gióng, cột tròn, cầu thang, vòng tròn, trục…).</li>
+<li><b>Tay kéo giữa cạnh (ô vuông màu):</b> cầm kéo = đổi kích thước, cạnh đối diện đứng yên (cột, đồ). Ở tường (cả tường cong) là hai mặt tường: kéo = đổi bề dày, mặt kia đứng yên.</li>
+<li><b>Đặt đồ, cửa, cột:</b> góc và giữa cạnh của vật tự hút vào góc / mặt tường / điểm của vật khác; cửa tự hút mép vào mép trong tường chặn và mép cửa khác trên cùng tường.</li>
+<li><b>Tường cong:</b> bấm chọn thì có số dài cung thông thủy, bề dày, bán kính (R), độ mở (°); bấm vào số để sửa. Cửa trên tường cong cũng có số w / l / r tính theo dài cung.</li>
+</ul>
 </section>
 
 <section id="ghi-chu-dim">
@@ -215,6 +226,7 @@ footer{max-width:860px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <li><b>Có mũi tên dẫn</b> (mặc định): bấm <b>lần 1</b> vào điểm cần chỉ (đầu mũi tên), kéo ra thì thấy đường dẫn đi theo chuột; bấm <b>lần 2</b> vào chỗ đặt chữ rồi gõ chữ ngay tại chỗ. <kbd>Enter</kbd> = xong, <kbd>Esc</kbd> = huỷ.</li>
 <li>Tắt «Mũi tên dẫn» ở bảng phải thì bấm 1 lần là gõ chữ luôn.</li>
 <li>Kiểu chữ: Ghi chú, Tiêu đề, Số tờ / diện tích, Cao độ sàn (cao độ không có mũi tên). Cỡ chữ tính theo mm trên giấy in, tự nhân theo tỉ lệ in khi xuất.</li>
+<li>Chọn một chữ: bảng «Đối tượng đang chọn» có ô <b>Xoay°</b> (chữ xoay, xuất DXF / PDF đúng góc), nút <b>Kiểu chữ</b> và nút bật / tắt <b>Mũi tên dẫn</b>. Lệnh Xoay xoay cả chữ; đối xứng thì chữ vẫn đọc xuôi, không bị lật ngược.</li>
 </ul>
 <h3>Kích thước (phím N)</h3>
 <ul>
