@@ -180,6 +180,18 @@ footer{max-width:860px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <li>Chọn loại phòng ở bảng phải (khách, ngủ, bếp…) để đổ màu và ghi tên. Diện tích tự tính.</li>
 <li><b>Lỗ thông tầng</b> (giếng trời…) là một loại phòng có ký hiệu riêng, chỉ ghi tên, không ghi diện tích.</li>
 </ul>
+<h3>Đo hiện trạng (nút gạt cạnh tên app, hoặc Shift+A)</h3>
+<p>Dùng khi đi đo nhà thật. Số đo thực tế thường <b>không vuông</b> (cạnh trên khác cạnh dưới vài chục mm), nên trang không vẽ y nguyên từng số mà dựng khung vuông rồi dồn phần lệch vào một góc xấu.</p>
+<ol>
+<li>Vẽ <b>phom</b> tổng thể bằng tường (tường kín), chưa cần đúng số. Có thể đặt cửa, cột như bình thường.</li>
+<li>Gạt nút <b>Đo hiện trạng</b> cạnh tên app (hoặc <kbd>Shift</kbd>+<kbd>A</kbd>) sang bật, rồi bấm vào trong phòng cần đo. Gạt tắt (hoặc chọn công cụ vẽ khác) thì về làm việc bình thường như trước.</li>
+<li>Nhập số đo <b>thông thủy</b> (khoảng trống giữa hai mặt tường trong) của 4 cạnh: Trên, Dưới, Trái, Phải. Gõ được <code>3m</code>, <code>2500+450</code>…</li>
+<li>Chọn <b>góc dồn sai số</b>: góc xấu của nhà (góc WC, góc bếp, góc hộp kỹ thuật…).</li>
+<li>Bấm <b>Áp số đo</b>.</li>
+</ol>
+<p><b>Sửa riêng từng đối tượng:</b> khi nút gạt đang bật, bấm vào một <b>đoạn tường</b> thì bảng «Đối tượng đang chọn» có ô <b>Dài thông thủy</b>. Gõ số mới (<code>4m</code>, <code>3780+220</code>…) thì đầu kia của tường và mọi thứ phía đó được kéo giãn theo, các góc vuông giữ vuông, tường đã nối vẫn nối, phòng và cửa đi theo. Chọn «Đầu đứng yên» (đầu xanh hoặc đầu cam, hiện chấm màu trên tường) để biết phía nào dịch. Bấm vào <b>cột</b>, <b>cửa</b>, <b>đồ</b> thì sửa rộng, cao, vị trí như bình thường.</p>
+<p><b>Trang làm gì với số đo cả phòng:</b> khung phòng thành hình chữ nhật <b>vuông theo số lớn nhất</b> của từng phương (ngang = lớn hơn của Trên / Dưới; dọc = lớn hơn của Trái / Phải). Góc đối diện với góc dồn đứng yên; phần phía góc dồn được kéo giãn: tường chạy qua dài ra hoặc ngắn lại, các góc vuông giữ vuông, tường đã nối vẫn nối, phòng bên cạnh dịch theo, cửa giữ đúng chỗ. Trên màn hình mỗi cạnh ghi số đo; cạnh nào khác số vẽ thì hiện màu cam, kèm «vẽ ..., −40». Góc dồn có chấm đỏ và «bù 40 × 15».</p>
+<div class="note">Ghi chú lệch chỉ hiện trên màn hình, không đưa vào DXF / PDF. Hiện làm cho phòng chữ nhật 4 cạnh; phòng chữ L hoặc nhiều góc sẽ làm sau. Nhập lại số đo cho cùng phòng thì tính tiếp trên khung hiện tại; hoàn tác (<kbd>Ctrl</kbd>+<kbd>Z</kbd>) về một bước.</div>
 <h3>Đồ nội thất, cây (phím F) và tủ (phím Z)</h3>
 <ul>
 <li>Chọn món ở bảng phải rồi bấm để đặt. <kbd>Shift</kbd>+<kbd>R</kbd> xoay 90° (chữ <kbd>r</kbd> thường dành cho gõ độ rộng), <kbd>A</kbd> áp tường gần nhất, <kbd>J</kbd> căn, <kbd>2</kbd> vẽ đồ bằng 2 điểm.</li>
